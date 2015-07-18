@@ -1,0 +1,593 @@
+/* 
+    Document   : Jack_PHP
+    Created on : 2010/5/30, 下午 09:52:16
+    Author     : jackjow
+    Description:
+    Purpose of the stylesheet follows.
+    Last modified: Sept. 4, 2013
+*/
+root { 
+    display: block;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #A9D0D6;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;;
+}
+
+img { 
+    border: none;
+}
+a {
+    /* color: #57626a;*/
+    text-decoration: none;
+} 
+a:hover {
+    text-decoration: underline;
+    color : #000;
+}
+
+/* ------------------ warp ------------------------*/
+#wrap {
+    margin: 3px auto 5px auto;
+    width: 978px;
+    position: relative;
+    background: #FFF;
+    box-shadow: 0px 0px 150px 0px rgba(0, 0, 0, 0.15);
+    border-top: 0;
+    text-align: left;
+    border: solid 1px #82A7AD;
+}
+/* ------------------ banner --------------------- */
+#banner {
+    background-image: url('../Images/banner.png');
+    height: 80px;
+    background-position: 0px 0px;
+}
+/* ------------------ header ------------------------*/
+#header {
+    height: 80px;
+    padding: 0px 0 0px 0;
+    background: #FFFAE7 url('../Images/banner.png') center no-repeat;
+}
+#header h1 {
+    font-size: 26px;
+    font-weight: 100;
+    letter-spacing: 0px;
+    padding: 12px 0 5px 10px;
+}
+#header h1 a {
+    color: #57626a;
+    text-decoration: none;
+}
+#header h1 a:hover {
+    color: #57626a;
+    text-decoration: none;
+}
+#header h2 {
+    color: #000099;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 0 0 0 11px;
+    letter-spacing: -1px;
+    line-height: 24px;
+}
+/* --------------  sideNav ----------------------*/
+#sideNav {
+	float: left;
+	width: 150px;
+	margin: 8px;
+	padding: 5px;
+	background: #FFC194;
+	border-right: 1px solid #bbb;
+/*  border: solid 1px #00f; */
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.85);
+}
+#sideNav ul {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #FFF;
+    list-style: none; 
+    text-indent: 15px;
+}
+#sideNav ul li{
+	padding: 2px;
+	position: relative; 
+	height:20px; 
+	line-height:1.5em;
+	background:#3f3f3f;
+	border-bottom:1px solid #986342;
+}
+#sideNav li > ul{ 
+/*	background: green; */
+	visibility: hidden; 
+	width: 150px; 
+	position: absolute; 
+	top:0px; 
+	left:220px; 
+	border-left:1px solid #000; 
+}
+#sideNav > ul > li > ul{ 
+	color: #fff;
+	top: 10px; 
+	left: 150px; 
+} 
+#sideNav li:hover{ 
+	background: #aaa;
+} 
+#sideNav li:hover > ul{ 
+	visibility:visible; 
+}
+#sideNav ul li a{
+    text-decoration:none;
+    color: #FFF;
+    display:block;
+}
+#sideNav ul li a:hover{
+    background:#d40203;
+}
+#sideNav ul li#active{
+    background:#A52A2A;
+}
+
+#qrCode {
+	height: 100px;
+	width: 150px;
+	
+	background: url('../Images/jackWebURL.png') center no-repeat;
+}
+
+/* ---------------- Content ---------------------- */
+#content {
+	float: right;
+	background: #F3F1DF;
+	padding: 0;
+	width: 790px;
+	margin: 5px; 
+/*	border: solid 1px #0000ff; 
+	box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.85);*/
+}
+#content a {
+	color: blue;
+}
+#content a:hover {
+	color: green;
+}
+
+/* ---------------   footer ------------- */
+#footer {
+	clear: both;
+	padding: 10px 40px 10px 40px;
+	color: #302F2C;
+	background: #E1F2DE;
+	/* position: relative; 
+	width: 898px;*/
+	font-size: 1.3em;
+	line-height: 1.5em;
+	border-top: solid 1px #BFB5A4;
+	box-shadow: inset 0px 0px 0px 1px #fff;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.9);
+	text-align: center;
+}
+
+/* ------------------------ article ----------------- */
+.article {
+	padding: 10px;
+	margin: 0 0 20px 0;
+	background: #D3E4E9;
+	box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.85);
+/*	box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.85);
+	text-shadow: 1px 1px 0px rgba(255,255,255,1);  */
+}
+.article ol{
+	padding-left: 30px;
+}
+
+.article ol li {
+	text-align:justify;
+    line-height: 1.5em;
+    font-family: "Times New Roman";
+    list-style-type: decimal;
+    list-style-position: outside;
+    font-size: 1.5em;
+}
+.articleTitle {
+	font-size: 2em;
+	line-height: 2em;
+	color: #191E82;
+	font-weight: 400;
+	text-shadow: 5px 5px 5px pink;
+}
+.article table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.article th {
+    font-size: 1.1em;
+	line-height: 1.4em;
+    background: #F8DDE2;
+    text-align: center;
+    font-family: 新細明體, Verdana, "Times New Roman";
+    border: 1px solid #A52A2A;
+}
+.article td {
+    font-size: 1.1em;
+    background: #C7F2C7;
+    line-height: 1.4em;
+    font-family: 新細明體, Verdana, "Times New Roman";
+    border: solid 1px #8B6914;
+}
+/* ----------------------- other style -------------------*/
+.style1 {
+    color: #36a;
+    font-family: "Times New Roman";
+    font-size: 28px;
+    word-spacing:5px;
+}
+.style2 {
+    color: navy;
+    font-family: 新細明體, Verdana, "Times New Roman";
+    font-size: 24px;
+    word-spacing:5px;
+}
+.style3 {
+    color: darkred;
+    font-family: 新細明體, Verdana, "Times New Roman";
+    font-size: 18px;
+    word-spacing:5px;
+}
+.style4 {
+    color: darkblue;
+    font-family: 新細明體, Verdana, "Times New Roman";
+    font-size: 18px;
+    word-spacing:5px;
+}
+.pubStyle1 {
+    line-height: 150%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+}
+.pubTitleStyle1 {
+    line-height: 150%;
+    font-family: Ariel;
+    color: #C43;
+    font-size: 24px;
+}
+.contentStyle1{
+    line-height: 150%;
+    font-size: 16px;
+}
+ol.pubList {
+	padding-left: 30px;
+}
+ol.pubList li{
+	text-align:justify;
+    line-height: 1.5em;
+    font-family: "Times New Roman";
+    list-style-type: decimal;
+    list-style-position: outside;
+    font-size: 1.5em;
+}
+table.s1 {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 1.2em;
+}
+th.s1 {
+	background: #C18888;
+	border: 1px solid #530000;
+	border-bottom: 3px solid #530000;
+	height: 2em;
+}
+td.s1 {
+	background: #CEE7BA;
+	border: 1px solid #183600;
+	height: 2em;
+}
+li.hotlink {
+	font-size: 1.3em;
+	padding-left: 2em;
+	height: 2em;
+	list-style-type: none;
+}
+
+table.s2 {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 1.2em;
+}
+th.s2 {
+	background: #7376B3;
+	border: 1px solid #530000;
+	font-family: 'Times New Romans' '新細明體';
+	border-bottom: 3px solid #530000;
+	height: 2em;
+}
+td.s2 {
+	background: #E3E7BA;
+	font-family: 'Times New Romans' '新細明體';
+	border: 1px solid #183600;
+	height: 2em;
+}
+
+
+
+
+
+/* ---------------- Page ---------------------- */
+#page .section-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+#page .section-list li {
+	padding: 25px 0 25px 0;
+	clear: both;
+}
+
+#page ul {
+	list-style: none;
+}
+
+#page ul li {
+	border-top: solid 1px #DDD;
+	padding: 10px 0 10px 0;
+}
+
+#page ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+#page-bottom {
+	padding: 10px 40px 10px 40px;
+	color: #302F2C;
+	background: #F2EBDE;
+	position: relative;
+	width: 898px;
+	border-top: solid 1px #BFB5A4;
+	box-shadow: inset 0px 0px 0px 1px #fff;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.9);
+}
+
+#page-bottom a {
+	color: #1B1A18;
+}
+
+#page-bottom h2, #page-bottom h3, #page-bottom h4 {
+	color: #3F3D39;
+}
+
+#page-bottom ul {
+	list-style: none;
+}
+
+#page-bottom ul li {
+	border-top: solid 1px #BAB5AB;
+	padding: 10px 0 10px 0;
+}
+
+#page-bottom ul li.first {
+	border-top: 0;
+	padding-top: 0;
+}
+
+#page-bottom-content {
+	width: 615px;
+	margin: 0 0 0 285px;
+}
+
+#page-bottom-sidebar {
+	float: left;
+	width: 250px;
+}
+
+.box {
+	margin: 0 0 50px 0;
+}
+
+.right {
+    width: 568px;
+    float: right;
+    text-align: justify;
+}
+.right h1 {
+    color: #554499;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    font-weight: 800;
+    padding : 10px 0 15px 0;
+}
+.right ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
+.right ul li {
+    height: 30px;
+    font-size: 16px;
+}
+.right h2 {
+    color: #FF48AA;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    font-weight: 100;
+    padding : 10px 0 15px 0;
+}
+.right table{
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 新細明體, Verdana, "Times New Roman";
+}
+.right a{
+    color: blue;
+}
+.right a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.left {
+    width: 150px;
+    float: left;
+    padding: 10px;
+    border-right: 1px solid #bbb;
+    font-size: 12px;
+}
+.left ul {
+    list-style-type: square;
+    padding: 5px 10px 10px 20px;
+    color: #57626a;
+}
+.left h2 {
+    height: 30px;
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    font-weight: 600;
+}
+.left a { 
+    text-decoration: none
+}
+.courseTableL1{
+    font-size: 16px;
+    line-height: 25px;
+    position: relative;
+    left: 6px;
+    /*visibility: hidden;*/
+}
+
+.courseTableL2{
+    font-size: 16px;
+    line-height: 25px;
+    position: relative;
+    left: 18px;
+    display: none;
+}
+
+table {
+  border: 0;
+  font-family: arial;
+  font-size:14px;
+}
+p {
+    font-size: 14px;
+}
+
+/* ----------------------- navetation  (擬廢棄)-------------------*/
+/*Links*/
+#menu a:link, a:visited {
+	text-decoration: none;
+	color: #FFF; 
+	font-weight: bold;
+}
+
+#menu ul {
+	padding-left: 5px; 
+	margin: 0px; 
+	list-style: none; 
+	background: #556699; 
+	font-size: 1em;
+	height:3em; 
+}
+#menu ul li {
+	display: block;
+	float: left; 
+	position: relative;
+}
+#menu ul li a, ul li a:visited {
+	display: block; 
+	color: #fff; 
+	/* width: 4em; */
+	height: auto; 
+	line-height: 1.5em; 
+	padding: 0.8em;
+	text-align: center;
+}
+#menu ul li a:hover {
+	display: block; 
+	color: #4D4D4D; 
+	background: #ADD8E6; 
+	line-height: 1.5em; 
+	padding: 0.75em;
+}
+
+#menu ul li ul, ul li:hover ul li ul {
+	display: none;
+}
+
+#menu ul li:hover ul {
+	display: block; 
+	position: absolute; 
+	padding-top: 0px; 
+	padding-left: 0px; 
+	height: auto; 
+}
+#menu ul li:hover ul li a {
+	display:block; 
+	text-align:left; 
+	width: 8em;
+	border-bottom:1px solid #FFA500;
+}
+
+#menu ul li:hover ul li:hover ul {
+	display: block; 
+	position: absolute; 
+	padding-left: 10em;
+	padding-top: 0px;
+}
+
+
+#menu {
+    height: 37px;
+    line-height: 3em;
+    /* border: solid 1px #00f; */
+}
+/*
+#menu ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
+#menu ul li {
+    display: block;
+    float: left;
+}
+#menu ul li a {
+    color: #eee;
+    padding: 0 10px;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+#menu ul li a:hover {
+    color: #00ffff;
+    text-decoration: underline;
+}
+*/
+
+/* ---------------- Sidebar (擬廢棄) ---------------------- */
+#sidebar {
+	padding: 0;
+	float: left;
+	width: 180px;
+	background: #EEF5F6;
+	padding: 20px;
+	border: solid 1px #D6E0E2;
+	/* margin: 0 10px 0 0; */
+	/* text-shadow: 1px 1px 0px rgba(255,255,255,1);*/
+	box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.85);
+}
