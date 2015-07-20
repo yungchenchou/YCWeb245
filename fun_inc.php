@@ -16,7 +16,8 @@ function MyCounter(){
 	fputs($fp, $counter);
 	fclose($fp);
     }
-    echo "<font color=#780B0B>".$counter."</font>";	
+    //echo "<font color=#780B0B>".$counter."</font>";
+    echo "<font color=#ffff00>".$counter."</font>";
 }
 
 function MyCounter1(){
@@ -45,59 +46,79 @@ function MyCounter1(){
 	echo "<font color=#780B0B>".$counter."</font>";
 }
 
-
 function footering(){
-?>	
-	<div id="footer">
-		您是自2010年5月以來 第  <?php MyCounter();?> 位 參觀本站的訪客 <br/>
-		現在時間: <span id="clock"><script type ="text/javascript" src="showTime.js"></script></span>
+?>
+	<div class='container'>
+		<div style="width: 100%; background-color: #1995dc; padding: 0.8em; color: white; font-family: '微軟正黑體';">	
+			<p style="text-align: center; font-size: 1.4em;">您是自 2010 年 5 月以來 第  <?php MyCounter();?> 位 參觀本站的訪客 <br/>
+			現在時間: <span id="clock"><script type ="text/javascript" src="showTime.js"></script></span></p>
+		</div>
 	</div>
 <?php 
 }
 
-function headerBanner(){
-	echo "<div id='header'></div>";
-}
+function headerBanner($flag){
+	?>
+	      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
 
-function mainMenu(){
-	echo "<ul id='nav'>
-				<li><a href='index.php'>首頁</a></li>
-				<li><a href='vita.php'>簡歷</a></li>
-				<li><a href='activities.php'>學術活動</a></li>
-				<li><a href='pubList.php'>著作</a></li>
-				<li><a href='courses.php'>授課</a></li>
-				<li><a href='students.php'>徒弟</a></li>
-				<li><a href='favLink.php'>有用連結</a></li>
-				<li><a href='http://120.108.117.245/dokuwiki' target='_blank'>傑克讀酷</a></li>
-				<li><a href='wordpress' target='_blank'>璞學草堂</a></li>
-        		<li><a href='http://eplus.asia.edu.tw/accounts/1465/channels/173?locale=zh_tw' target='_blank'>社群學習站</a></li>
-				<li><a href='https://120.108.116.237/~jackjow/login.html'>管理者</a></li>
-				<li><a href='eIndex.php'>ENGLISH</a></li>
-				<li><img source='Images/S69PEBHJO7.png'></li>
-			</ul>";
-}
-
-function sideNav($flag){
-	$ipTmp = 'http://120.108.117.245/~jackjow/';
-	echo "  <div id='sideNav'>
-			<ul>
-				<li "; if ($flag == 1) echo "id='active'"; echo "><a href='".$ipTmp."'>首頁</a></li>";
-	echo	"<li "; if ($flag == 2) echo "id='active'"; echo "><a href='".$ipTmp."vita.php'>簡歷</a></li>";
-	echo	"<li "; if ($flag == 3) echo "id='active'"; echo "><a href='".$ipTmp."activities.php'>學術活動</a></li>";
-	echo	"<li "; if ($flag == 4) echo "id='active'"; echo "><a href='".$ipTmp."pubList.php'>著作</a></li>";
-	echo	"<li "; if ($flag == 5) echo "id='active'"; echo "><a href='".$ipTmp."courses.php'>授課</a>";
-	echo	"<li "; if ($flag == 6) echo "id='active'"; echo "><a href='".$ipTmp."students.php'>徒弟</a></li>";
-	echo	"<li "; if ($flag == 7) echo "id='active'"; echo "><a href='".$ipTmp."favLink.php'>有用連結</a></li>";
-	echo	"<li "; if ($flag == 8) echo "id='active'"; echo "><a href='http://mslab.csie.asia.edu.tw/doku' target='_blank'>傑克獨酷</a></li>";
-	echo	"<li "; if ($flag == 9) echo "id='active'"; echo "><a href='wordpress' target='_blank'>璞學草堂</a></li>";
-	echo	"<li "; if ($flag == 12) echo "id='active'"; echo ">
-						<a href='http://eplus.asia.edu.tw/accounts/1465/channels/173?locale=zh_tw' target='_blank'>社群學習站</a></li>";
-	echo	"<li "; if ($flag == 10) echo "id='active'";
-	echo "><a href='".$ipTmp."login.html'>管理者</a></li>";
-	echo	"<li "; if ($flag == 11) echo "id='active'"; echo "><a href='".$ipTmp."eIndex.php'>ENGLISH</a></li>
-			</ul>
-			<div id='qrCode'></div>
-		</div>";
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+ 
+			<a class="navbar-brand" href="#">璞學草堂</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li <?php if($flag == 1) echo "class=\"active\"";?>><a href="index.php">首頁</a></li>
+              <li <?php if($flag == 2) echo "class=\"active\"";?>><a href="vita.php">簡歷</a></li>
+              <li <?php if($flag == 3) echo "class=\"active\"";?>><a href="acdmActivites.php">學術活動</a></li>
+			<li <?php if($flag == 4) echo "class=\"active\"";?> class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">著作
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">國際期刊</a></li>
+                  <li><a href="#">國際研討會</a></li>
+                  <li><a href="#">專書論文</a></li>
+                  <li><a href="#">國內期刊</a></li>
+                  <li><a href="#">國內研討會</a></li>
+                  <li><a href="#">其他 </a></li>
+                </ul>
+              </li>
+			<li <?php if($flag == 5) echo "class=\"active\"";?> class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教學
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">研究所</a></li>
+                  <li><a href="#">大學部</a></li>
+                </ul>
+              </li>
+			<li <?php if($flag == 6) echo "class=\"active\"";?> class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">徒弟
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">博士生</a></li>
+                  <li><a href="#">碩士生</a></li>
+                  <li><a href="#">大學部專題</a></li>
+                </ul>
+              </li>
+              <li <?php if($flag == 7) echo "class=\"active\"";?>><a href="favLink.php">有用連結</a></li>
+              <li><a href="http://120.108.117.245/dokuwiki/">傑克讀庫</a></li>
+              <li><a href="http://120.108.117.245/~jackjow/wordpress">璞學部落</a></li>
+              <li><a href="http://120.108.117.245/~jackjow/wordpress">璞學部落</a></li>
+              </ul>
+            <ul class="nav navbar-nav navbar-right">
+        		<li><a href="adm/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      		</ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+	<?php 
 }
 
 function sideNavEng($flag){
@@ -115,23 +136,6 @@ function sideNavEng($flag){
 			</ul>
 			<center><img src='Images/RLO742SLFQ.png'></center>
 		</div>";
-}
-
-function mainMenu_old(){
-	echo "<!-- <ul>
-            <li><a onclick=\"window.location='index.php'\" style=\"cursor:pointer\">首頁</a></li>
-            <li><a onclick=\"window.location='vita.php'\" style=\"cursor:pointer\">簡歷</a></li>
-            <li><a onclick=\"window.location='activities.php'\" style=\"cursor:pointer\">學術活動</a></li>
-            <li><a onclick=\"window.location='pubList.php'\" style=\"cursor:pointer\">著作</a></li>
-            <li><a onclick=\"window.location='courses.php'\" style=\"cursor:pointer\">授課</a></li>
-            <li><a onclick=\"window.location='students.php'\" style=\"cursor:pointer\">徒弟</a></li>
-            <li><a onclick=\"window.location='photos.html'\" style=\"cursor:pointer\">翦影</a></li>
-            <li><a onclick=\"window.location='favLink.php'\" style=\"cursor:pointer\">有用連結</a></li>
-            <li><a onclick=\"window.location='mslab.csie.asia.edu.tw/doku'\" style=\"cursor:pointer\">傑克獨酷</a></li>
-            <li><a onclick=\"window.location='wordpress'\" style=\"cursor:pointer\">璞學草堂</a></li>
-            <li><a onclick=\"window.location='login.html'\" style=\"cursor:pointer\">管理者</a></li>
-            <li><a onclick=\"window.location='eIndex.php'\" style=\"cursor:pointer\">ENGLISH</a></li>
-        </ul>  -->";
 }
 
 // PHP 日曆 http://pink0420.pixnet.net/blog/post/4795571
