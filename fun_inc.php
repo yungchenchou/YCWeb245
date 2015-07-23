@@ -74,7 +74,7 @@ function headerBanner($flag){
 			<a class="navbar-brand" href="#">璞學草堂</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="font-size: 1.3em; font-family: '微軟正黑體'">
               <li <?php if($flag == 1) echo "class=\"active\"";?>><a href="index.php">首頁</a></li>
               <li <?php if($flag == 2) echo "class=\"active\"";?>><a href="vita.php">簡歷</a></li>
               <li <?php if($flag == 3) echo "class=\"active\"";?>><a href="acdmActivites.php">學術活動</a></li>
@@ -82,7 +82,7 @@ function headerBanner($flag){
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">著作
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">國際期刊</a></li>
+                  <li><a href="pubIJList.php">國際期刊</a></li>
                   <li><a href="#">國際研討會</a></li>
                   <li><a href="#">專書論文</a></li>
                   <li><a href="#">國內期刊</a></li>
@@ -113,7 +113,7 @@ function headerBanner($flag){
               <li><a href="http://120.108.117.245/~jackjow/wordpress">璞學部落</a></li>
               </ul>
             <ul class="nav navbar-nav navbar-right">
-        		<li><a href="adm/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        		<li><a href="adm/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       		</ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
