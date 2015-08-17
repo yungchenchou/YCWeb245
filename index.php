@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>    
 <?php  include("fun_inc.php"); 	session_start();  ?>
 <html>
     <head>
